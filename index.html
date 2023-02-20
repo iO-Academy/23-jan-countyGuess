@@ -3,17 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link rel="stylesheet" type="text/css"  href="style.css" >
-  <script src="index.js" defer></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="normalize.css" />
+    <link rel="stylesheet" type="text/css"  href="styles.css" >
+    <script src="index.js" defer></script>
 </head>
 <body>
-<!-- Trigger/Open The Modal -->
-<button id="instructions">Instructions</button>
 
-<!-- The Modal -->
+<section>
+    <img src="map.png">
+    <div class="container">
+        <button id="startGame">Start Game!</button>
+        <button id="instructions">Instructions</button>
+    </div>
 <div id="instructionModal">
-
-    <!-- Modal content -->
     <div id="instructionModalContent">
         <span id="instructionModalClose">&times;</span>
         <h4>INSTRUCTIONS</h4>
@@ -22,8 +25,8 @@
         <p>Correct guesses will be displayed in a list so you know which ones you've already got. </p>
         <p>Click the "Start Game" button to start playing</p>
     </div>
-
 </div>
+</section>
 
 </body>
 </html>
