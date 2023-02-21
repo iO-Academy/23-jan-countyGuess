@@ -23,7 +23,7 @@ main img {
     align-items: flex-start;
 }
 
-.playAreaContainer{
+.playAreaContainer {
     display:flex;
     flex-direction:column;
     width: 60%;
@@ -33,12 +33,12 @@ main img {
     display: none;
 }
 
-#inputContainer{
+#inputContainer {
     display:flex;
     justify-content:center;
 }
 
-.topButtonContainer{
+.topButtonContainer {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -132,6 +132,7 @@ ul {
     flex-wrap: wrap;
     padding-left: 8rem;
 }
+
 li {
     font-size: 0.75rem;
     padding-bottom: 0.2rem;
