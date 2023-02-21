@@ -12,9 +12,15 @@
 
     <main>
         <img src="map.png" alt="Map of English Counties">
-        <div class="container">
-            <button id="startGame">Start Game!</button>
-            <button id="instructions">Instructions</button>
+        <div class="playAreaContainer">
+            <div class="topButtonContainer">
+                <button id="startGame">Start Game!</button>
+                <button id="instructions">Instructions</button>
+            </div>
+            <div id="scoreContainer">
+                <p>Score:</p>
+                <p id="scoreCounter"></p>
+            </div>
         </div>
         <div id="instructionModal">
             <div id="instructionModalContent">
@@ -26,6 +32,7 @@
                 <p>Click the "Start Game" button to start playing</p>
             </div>
         </div>
+
     </main>
 
 </body>

@@ -14,16 +14,32 @@ main {
 
 main img {
     width: 40%;
+
 }
 
-.container {
+.playAreaContainer{
+    display:flex;
+    flex-direction:column;
     width: 60%;
+}
+
+#scoreContainer {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+#scoreContainer p{
+    margin: 1rem;
+}
+
+.topButtonContainer{
     display: flex;
     justify-content: center;
     align-items: flex-start;
 }
 
-.container button {
+.topButtonContainer button {
     margin: 1rem 1rem 1rem 1rem;
     background-color: #222;
     border-radius: 0.4rem;
@@ -79,6 +95,8 @@ main img {
     cursor: pointer;
 }
 
+
+
 @media screen and (max-width: 800px) {
     main {
         display: block;
@@ -86,10 +104,10 @@ main img {
     main img {
         width: 100%
     }
-    .container {
+    .topButtonContainer {
         width: 100%;
     }
-    .container button {
+    .topButtonContainer button {
         font-size: 1rem;
     }
     #instructionModalContent {
