@@ -14,7 +14,6 @@ main {
 
 main img {
     width: 40%;
-
 }
 
 .playAreaContainer{
@@ -95,8 +94,6 @@ main img {
     cursor: pointer;
 }
 
-
-
 @media screen and (max-width: 800px) {
     main {
         display: block;
@@ -104,9 +101,10 @@ main img {
     main img {
         width: 100%
     }
-    .topButtonContainer {
+    .topButtonContainer,.playAreaContainer {
         width: 100%;
     }
+
     .topButtonContainer button {
         font-size: 1rem;
     }
