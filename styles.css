@@ -125,9 +125,6 @@ input:not(:placeholder-shown) {
     height: 69px;
 }
 
-/*.listContainer {*/
-/*    height: 5rem;*/
-/*}*/
 ul {
     display: flex;
     flex-direction: column;
