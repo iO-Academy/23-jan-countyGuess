@@ -12,10 +12,13 @@ const guessHandler = () => {
 //if correctInputArray has a value and is not duplicated, will be added to correctAnswers array
     if (correctInputArray.length !== 0 && !correctAnswers.includes(correctInputArray[0])){
         correctAnswers = correctAnswers.concat(correctInputArray)
+        upperGuessInput.forEach((item) => {
+            const listItem = document.createElement("li")
+            listItem.innerText = item
+            answersContainer.appendChild(listItem)
+        })
         guessInput.value = ''
     }
-
-    console.log(correctAnswers)
 }
 
 let guessInput = document.querySelector("#guessInput")
@@ -75,3 +78,13 @@ let counties = [
 
 let upperCounties = counties.map(makeUpper)
 let correctAnswers = []
+
+let answersContainer = document.querySelector("#answersContainer")
+
+//forEach through correctAnswers array put each answer into list in html
+// correctAnswers.forEach((item) => {
+//     const listItem = document.createElement("li")
+//     listItem.innerText = item
+//     answersContainer.appendChild(listItem)
+// })
+
