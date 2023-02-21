@@ -8,18 +8,7 @@ const guessHandler = () => {
     let guessInputArray = [guessInput.value]
     let upperGuessInput = guessInputArray.map(makeUpper)
 //filter function loops through user guesses and compares to counties list. Adds to new array if correct.
-    let correctInputArray = (upperGuessInput.filter((answer) => {
-        let match = false
-        upperCounties.forEach(
-            (county)=>{
-                if(answer === county)
-                {
-                    match = true
-                }
-            }
-        )
-        return match
-    }))
+    let correctInputArray = (upperGuessInput.filter((answer) => { return upperCounties.includes(answer) }))
 //if correctInputArray has a value and is not duplicated, will be added to correctAnswers array
     if (correctInputArray.length !== 0 && !correctAnswers.includes(correctInputArray[0])){
         correctAnswers = correctAnswers.concat(correctInputArray)
