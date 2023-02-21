@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #9EC7F3;
+    font-size: 62.5%;
+    font-family: "Helvetica Neue",Arial,sans-serif;
+}
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+main img {
+    width: 40%;
+}
+
+.container {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container button {
+    margin: 1rem 1rem 1rem 1rem;
+    background-color: #222;
+    border-radius: 0.4rem;
+    border-style: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    padding: 0.8rem 0.8rem 0.8rem;
+    width: 40%;
+    opacity: .75;
+    box-shadow: 0.2rem 0.2rem 0.2rem #808080;
+}
+
+#instructionModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 10rem; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+#instructionModalContent {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 1.2rem;
+    border: 1px solid #888;
+    width: 30%;
+    height: auto;
+    font-size: 0.8rem;
+}
+
+/* The Close Button */
+#instructionModalClose {
+    color: #aaaaaa;
+    font-size: 2.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#instructionModalClose:hover,
+#instructionModalClose:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    main {
+        display: block;
+    }
+    main img {
+        width: 100%
+    }
+    .container {
+        width: 100%;
+    }
+    .container button {
+        font-size: 1rem;
+    }
+    #instructionModalContent {
+        width: 70%;
+    }
+}
