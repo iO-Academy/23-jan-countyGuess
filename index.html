@@ -2,13 +2,42 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-  <script src="guessInput.js" defer></script>
+    <title>Map Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="normalize.css" />
+    <link rel="stylesheet" type="text/css"  href="styles.css" >
+    <script src="index.js" defer></script>
+    <script src="guessInput.js" defer></script>
 </head>
 <body>
-<input id="guessInput" type="text">
-<div>
-<ul id="answersContainer"></ul>
-</div>
+
+    <main>
+
+        <img src="map.png" alt="Map of English Counties">
+        <div class="playAreaContainer">
+            <div class="topButtonContainer">
+                <button id="startGame">Start Game!</button>
+                <button id="instructions">Instructions</button>
+            </div>
+            <div id="inputContainer">
+                <input id="guessInput" type="text">
+            </div>
+            <div class="listContainer">
+                <ul id="answersContainer"></ul>
+            </div>
+        </div>
+
+        <div id="instructionModal">
+                <div id="instructionModalContent">
+                    <span id="instructionModalClose">&times;</span>
+                    <h4>INSTRUCTIONS</h4>
+                    <p>You have 30 seconds to guess as many English counties as possible. You can guess as many times as you are able too.</p>
+                    <p>Type your guess into the text box, if it is correct it will disappear, if it doesn't you've got it wrong - keep trying. Don't worry about capitalisation! </p>
+                    <p>Correct guesses will be displayed in a list so you know which ones you've already got. </p>
+                    <p>Click the "Start Game" button to start playing</p>
+                </div>
+            </div>
+    </main>
+
 </body>
 </html>
