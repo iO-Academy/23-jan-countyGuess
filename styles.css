@@ -29,6 +29,10 @@ main img {
     width: 60%;
 }
 
+#startGame {
+    display: none;
+}
+
 #inputContainer{
     display:flex;
     justify-content:center;
@@ -121,6 +125,21 @@ input:not(:placeholder-shown) {
     height: 69px;
 }
 
+/*.listContainer {*/
+/*    height: 5rem;*/
+/*}*/
+ul {
+    display: flex;
+    flex-direction: column;
+    max-height: 23rem;
+    flex-wrap: wrap;
+    padding-left: 8rem;
+}
+li {
+    font-size: 0.75rem;
+    padding-bottom: 0.2rem;
+}
+
 @media screen and (max-width: 800px) {
     main {
         display: block;
@@ -136,6 +155,9 @@ input:not(:placeholder-shown) {
     }
     #instructionModalContent {
         width: 70%;
+    }
+    ul {
+        padding-left: 3rem;
     }
 }
 
