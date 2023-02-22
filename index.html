@@ -7,18 +7,19 @@
     <link rel="stylesheet" type="text/css" href="normalize.css" />
     <link rel="stylesheet" type="text/css"  href="styles.css" >
     <script src="index.js" defer></script>
-    <script src="guessInput.js" defer></script>
 </head>
 <body>
     <main>
         <img src="map.png" alt="Map of English Counties">
         <div class="playAreaContainer">
             <div class="topButtonContainer">
+                <div id="timerContainer"></div>
                 <button id="startGame">Start Game!</button>
                 <button id="instructions">Instructions</button>
             </div>
             <div id="inputContainer">
-                <label for="guessInput"></label><input id="guessInput" type="text">
+                <label for="guessInput"></label>
+                <input id="guessInput" type="text">
             </div>
             <div id="scoreContainer">
                 <p>Score:</p>
@@ -39,6 +40,13 @@
                     <p>Click the "Start Game" button to start playing</p>
                 </div>
             </div>
+        <div id="scoreModal">
+            <div id="scoreModalContent">
+                <h4>YOUR SCORE</h4>
+                <p id="finalScore"> Score will be here </p>
+                <button id="restartButton">Restart</button>
+            </div>
+        </div>
     </main>
 </body>
 </html>
