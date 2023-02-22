@@ -137,3 +137,9 @@ let scoreCount = 0
 
 let scoreCounter = document.querySelector("#scoreCounter")
 scoreCounter.innerText = scoreCount
+
+let restartButton = document.querySelector('#restartButton')
+
+restartButton.addEventListener("click", () => {
+    location.reload()
+})
