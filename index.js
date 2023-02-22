@@ -8,6 +8,8 @@ const guessHandler = () => {
         listItem.innerText = getInputValue
         answersContainer.appendChild(listItem)
         guessInput.value = ''
+        scoreCount ++
+        scoreCounter.innerText = scoreCount
     }
 }
 
@@ -34,9 +36,6 @@ let instructionModalClose = document.getElementById("instructionModalClose");
 let scoreModal = document.getElementById("scoreModal")
 let scoreModalClose = document.querySelector('#scoreModalClose')
 let finalScore = document.querySelector('#finalScore')
-
-//hard coded final score until merged
-let scoreCount = 10
 
 let startGame = document.querySelector("#startGame")
 let guessInput = document.querySelector("#guessInput")
@@ -133,3 +132,8 @@ startGame.addEventListener("click", () => {
         }
     }, 1000)
 })
+
+let scoreCount = 0
+
+let scoreCounter = document.querySelector("#scoreCounter")
+scoreCounter.innerText = scoreCount

@@ -17,8 +17,23 @@ main img {
     width: 40%;
 }
 
-.container {
+.playAreaContainer {
+    display:flex;
+    flex-direction:column;
     width: 60%;
+}
+
+#scoreContainer {
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+#scoreContainer p {
+    margin: 1rem;
+}
+
+.topButtonContainer {
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -47,11 +62,11 @@ main img {
 
 #timerContainer p {
     font-size: 4rem;
-    margin: 0rem 1rem 1rem 1rem;
+    margin: 0 1rem 1rem 1rem;
     color: #222;
     font-weight: 700;
     line-height: 1.5;
-    padding: 0rem 0.8rem 0.8rem;
+    padding: 0 0.8rem 0.8rem;
     width: auto;
     text-align: right;
 }
@@ -152,7 +167,7 @@ ul {
 }
 
 li {
-    font-size: 0.75rem;
+    font-size: 1.2rem;
     padding-bottom: 0.2rem;
 }
 
@@ -194,5 +209,8 @@ li {
     #restart {
         width: 60%;
     }
-}
 
+    li {
+        font-size: 0.75rem;
+    }
+}
