@@ -25,8 +25,7 @@ window.addEventListener('click',(e) => {
     }
 })
 
-let scoreCounter = document.querySelector("#scoreCounter")
 
-scoreCounter.innerText = 0
+
 
 
