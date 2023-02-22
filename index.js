@@ -107,8 +107,10 @@ instructionModalClose.addEventListener('click',() => {
     instructionModal.style.display = "none";
 })
 
+
 startGame.addEventListener("click", () => {
     startGame.style.display = "none";
+    document.querySelector('#leaderboardContainer').style.display = "none"
     guessInput.style.display = "block";
     let gameTimer = document.createElement('p')
     gameTimer.innerText = 30
@@ -137,3 +139,4 @@ let restartButton = document.querySelector('#restartButton')
 restartButton.addEventListener("click", () => {
     location.reload()
 })
+
