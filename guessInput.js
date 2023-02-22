@@ -18,10 +18,22 @@ const guessHandler = () => {
 
 let startGame = document.querySelector("#startGame")
 let guessInput = document.querySelector("#guessInput")
+let timerContainer = document.querySelector("#timerContainer")
 
 startGame.addEventListener("click", () => {
     startGame.style.display = "none";
-    guessInput.style.display = "flex";
+    guessInput.style.display = "block";
+    let gameTimer = document.createElement('p')
+    gameTimer.innerText = 30
+    timerContainer.appendChild(gameTimer)
+    const interval = setInterval(() => {
+        gameTimer.innerText--
+        timerContainer.appendChild(gameTimer)
+        if (gameTimer.innerText == 0) {
+            clearInterval(interval)
+            gameTimer.innerText = ''
+        }
+    }, 1000)
 })
 
 

@@ -29,18 +29,30 @@ main img {
     width: 60%;
 }
 
-
+#guessInput {
+    display:none;
+}
 
 #inputContainer {
-    /*display:flex;*/
+    display:flex;
     justify-content:center;
-    display:none;
 }
 
 .topButtonContainer {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+}
+
+#timerContainer p {
+    font-size: 4rem;
+    margin: 0rem 1rem 1rem 1rem;
+    color: #222;
+    font-weight: 700;
+    line-height: 1.5;
+    padding: 0rem 0.8rem 0.8rem;
+    width: auto;
+    text-align: right;
 }
 
 .topButtonContainer button {
@@ -155,6 +167,11 @@ li {
     }
     ul {
         padding-left: 3rem;
+    }
+    #timerContainer p {
+        font-size: 4rem;
+        color: #222;
+        width: auto;
     }
 }
 
