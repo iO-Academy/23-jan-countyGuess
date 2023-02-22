@@ -45,8 +45,8 @@ main img {
     width: 60%;
 }
 
-#startGame {
-    display: none;
+#guessInput {
+    display:none;
 }
 
 #inputContainer {
@@ -60,7 +60,18 @@ main img {
     align-items: flex-start;
 }
 
-.topButtonContainer button {
+#timerContainer p {
+    font-size: 4rem;
+    margin: 0 1rem 1rem 1rem;
+    color: #222;
+    font-weight: 700;
+    line-height: 1.5;
+    padding: 0 0.8rem 0.8rem;
+    width: auto;
+    text-align: right;
+}
+
+button {
     margin: 1rem 1rem 1rem 1rem;
     background-color: #222;
     border-radius: 0.4rem;
@@ -76,7 +87,7 @@ main img {
     box-shadow: 0.2rem 0.2rem 0.2rem #808080;
 }
 
-#instructionModal {
+#instructionModal, #scoreModal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -90,7 +101,7 @@ main img {
 }
 
 /* Modal Content */
-#instructionModalContent {
+#instructionModalContent, #scoreModalContent {
     background-color: #fefefe;
     margin: auto;
     padding: 1.2rem;
@@ -98,6 +109,10 @@ main img {
     width: 30%;
     height: auto;
     font-size: 0.8rem;
+}
+
+#scoreModalContent {
+    text-align: center;
 }
 
 /* The Close Button */
@@ -150,27 +165,56 @@ ul {
 }
 
 li {
-    font-size: 0.75rem;
+    font-size: 1.2rem;
     padding-bottom: 0.2rem;
+}
+
+#leaderboardContainer {
+    display:flex;
+    justify-content:center;
+    font-size:1rem;
 }
 
 @media screen and (max-width: 800px) {
     main {
         display: block;
     }
+
     main img {
         width: 100%
     }
+
     .playAreaContainer {
         width: 100%;
     }
+
     .topButtonContainer button {
         font-size: 1rem;
     }
+
     #instructionModalContent {
         width: 70%;
     }
+
     ul {
         padding-left: 3rem;
+    }
+
+    #timerContainer p {
+        font-size: 4rem;
+        color: #222;
+        width: auto;
+    }
+
+    #scoreModalContent {
+        width: 60%;
+    }
+
+    #restartButton {
+        width: 60%;
+    }
+
+    li {
+        font-size: 0.75rem;
     }
 }
