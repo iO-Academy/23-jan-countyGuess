@@ -16,7 +16,15 @@ const guessHandler = () => {
     }
 }
 
+let startGame = document.querySelector("#startGame")
 let guessInput = document.querySelector("#guessInput")
+
+startGame.addEventListener("click", () => {
+    startGame.style.display = "none";
+    guessInput.style.display = "flex";
+})
+
+
 guessInput.addEventListener('keyup', guessHandler)
 
 

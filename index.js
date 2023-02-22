@@ -25,4 +25,3 @@ window.addEventListener('click',(e) => {
     }
 })
 
-
