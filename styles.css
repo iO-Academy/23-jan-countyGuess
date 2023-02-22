@@ -44,7 +44,7 @@ main img {
     align-items: flex-start;
 }
 
-.topButtonContainer button {
+button {
     margin: 1rem 1rem 1rem 1rem;
     background-color: #222;
     border-radius: 0.4rem;
