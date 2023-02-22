@@ -165,5 +165,11 @@ li {
     ul {
         padding-left: 3rem;
     }
+    #scoreModalContent {
+        width: 60%;
+    }
+    #restart {
+        width: 60%;
+    }
 }
 
