@@ -161,7 +161,9 @@ li {
     main img {
         width: 100%
     }
-
+    .playAreaContainer {
+        width: 100%;
+    }
     .topButtonContainer button {
         font-size: 1rem;
     }
