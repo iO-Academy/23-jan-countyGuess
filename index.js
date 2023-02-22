@@ -34,7 +34,6 @@ let instructionModalClose = document.getElementById("instructionModalClose");
 
 // Get the score modal
 let scoreModal = document.getElementById("scoreModal")
-let scoreModalClose = document.querySelector('#scoreModalClose')
 let finalScore = document.querySelector('#finalScore')
 
 let startGame = document.querySelector("#startGame")
@@ -106,11 +105,6 @@ instructions.addEventListener('click',() => {
 // When the user clicks on <span> (x), close the modal
 instructionModalClose.addEventListener('click',() => {
     instructionModal.style.display = "none";
-})
-
-// When the user clicks on <span> (x), close the modal
-scoreModalClose.addEventListener('click',() => {
-    scoreModal.style.display = "none";
 })
 
 startGame.addEventListener("click", () => {

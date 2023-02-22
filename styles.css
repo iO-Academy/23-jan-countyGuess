@@ -116,7 +116,7 @@ button {
 }
 
 /* The Close Button */
-#instructionModalClose, #scoreModalClose {
+#instructionModalClose {
     color: #aaaaaa;
     font-size: 2.5rem;
     font-weight: bold;
@@ -125,9 +125,7 @@ button {
 }
 
 #instructionModalClose:hover,
-#instructionModalClose:focus,
-#scoreModalClose:hover,
-#scoreModalClose:focus {
+#instructionModalClose:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
