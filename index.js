@@ -24,5 +24,3 @@ window.addEventListener('click',(e) => {
         instructionModal.style.display = "none";
     }
 })
-
-

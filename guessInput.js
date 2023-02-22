@@ -12,7 +12,10 @@ const guessHandler = () => {
         const listItem = document.createElement("li")
         listItem.innerText = getInputValue
         answersContainer.appendChild(listItem)
+        scoreCount ++
+        scoreCounter.innerText = scoreCount
         guessInput.value = ''
+
     }
 }
 
@@ -75,5 +78,7 @@ let upperCounties = counties.map(makeUpper)
 let correctAnswers = []
 
 let answersContainer = document.querySelector("#answersContainer")
+let scoreCount = 0
 
-
+let scoreCounter = document.querySelector("#scoreCounter")
+scoreCounter.innerText = scoreCount
