@@ -7,6 +7,7 @@ body {
     font-size: 62.5%;
     font-family: "Helvetica Neue",Arial,sans-serif;
 }
+
 main {
     display: flex;
     justify-content: space-between;
@@ -29,8 +30,8 @@ main img {
     width: 60%;
 }
 
-#startGame {
-    display: none;
+#guessInput {
+    display:none;
 }
 
 #inputContainer {
@@ -42,6 +43,17 @@ main img {
     display: flex;
     justify-content: center;
     align-items: flex-start;
+}
+
+#timerContainer p {
+    font-size: 4rem;
+    margin: 0rem 1rem 1rem 1rem;
+    color: #222;
+    font-weight: 700;
+    line-height: 1.5;
+    padding: 0rem 0.8rem 0.8rem;
+    width: auto;
+    text-align: right;
 }
 
 button {
@@ -106,8 +118,6 @@ button {
     cursor: pointer;
 }
 
-
-
 input {
     box-sizing: border-box;
     height: 65px;
@@ -150,24 +160,37 @@ li {
     main {
         display: block;
     }
+
     main img {
         width: 100%
     }
+
     .playAreaContainer {
         width: 100%;
     }
+
     .topButtonContainer button {
         font-size: 1rem;
     }
+
     #instructionModalContent {
         width: 70%;
     }
+
     ul {
         padding-left: 3rem;
     }
+
+    #timerContainer p {
+        font-size: 4rem;
+        color: #222;
+        width: auto;
+    }
+
     #scoreModalContent {
         width: 60%;
     }
+
     #restart {
         width: 60%;
     }
