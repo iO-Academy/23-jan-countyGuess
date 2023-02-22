@@ -60,7 +60,7 @@ main img {
     box-shadow: 0.2rem 0.2rem 0.2rem #808080;
 }
 
-#instructionModal {
+#instructionModal, #scoreModal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
@@ -74,7 +74,7 @@ main img {
 }
 
 /* Modal Content */
-#instructionModalContent {
+#instructionModalContent, #scoreModalContent {
     background-color: #fefefe;
     margin: auto;
     padding: 1.2rem;
@@ -84,8 +84,12 @@ main img {
     font-size: 0.8rem;
 }
 
+#scoreModalContent {
+    text-align: center;
+}
+
 /* The Close Button */
-#instructionModalClose {
+#instructionModalClose, #scoreModalClose {
     color: #aaaaaa;
     font-size: 2.5rem;
     font-weight: bold;
@@ -94,11 +98,15 @@ main img {
 }
 
 #instructionModalClose:hover,
-#instructionModalClose:focus {
+#instructionModalClose:focus,
+#scoreModalClose:hover,
+#scoreModalClose:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
 }
+
+
 
 input {
     box-sizing: border-box;
