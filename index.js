@@ -143,7 +143,7 @@ restartButton.addEventListener("click", () => {
 let scoreboardButton = document.querySelector('#scoreboardButton')
 scoreboardButton.addEventListener('click', () => {
     let nameInput = document.querySelector('#nameInput')
-    if (nameInput.value.trim() &&nameInput.value.length <= 1000){
+    if (nameInput.value.trim() &&nameInput.value.length <= 50){
         let dataToSend = {name:nameInput.value.replace(/[^\w\s]/gi, ''),score:scoreCount}
 
         fetch('https://23jancountyscoreboard.dev.io-academy.uk/scores', {
