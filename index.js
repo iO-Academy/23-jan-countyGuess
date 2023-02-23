@@ -142,7 +142,7 @@ restartButton.addEventListener("click", () => {
 
 let scoreboardButton = document.querySelector('#scoreboardButton')
 scoreboardButton.addEventListener('click', () => {
-    location.reload()
+
     let nameInput = document.querySelector('#nameInput')
     let dataToSend = {name:nameInput.value,score:scoreCount.value}
 
@@ -156,5 +156,6 @@ scoreboardButton.addEventListener('click', () => {
         return response.json()
     }).then((data) => {
         console.log(data)
+        location.reload()
     })
 })
