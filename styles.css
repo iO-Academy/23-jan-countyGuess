@@ -178,7 +178,6 @@ li {
 #nameInput {
     width: 200px;
     height: 55px
-
 }
 
 @media screen and (max-width: 800px) {
@@ -227,7 +226,5 @@ li {
     #nameInput {
         width: 150px;
         height: 50px
-
     }
-
 }

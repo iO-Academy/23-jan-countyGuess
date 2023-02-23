@@ -142,7 +142,6 @@ restartButton.addEventListener("click", () => {
 
 let scoreboardButton = document.querySelector('#scoreboardButton')
 scoreboardButton.addEventListener('click', () => {
-
     let nameInput = document.querySelector('#nameInput')
     let dataToSend = {name:nameInput.value,score:scoreCount.value}
 
