@@ -139,7 +139,7 @@ restartButton.addEventListener("click", () => {
     location.reload()
 })
 
-let scoreboard = document.querySelector('#leaderboardTable')
+let scoreboard = document.querySelector('#leaderboardTableBody')
 fetch('https://23jancountyscoreboard.dev.io-academy.uk/scores')
     .then((response) => {
       return response.json()
