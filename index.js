@@ -113,7 +113,7 @@ startGame.addEventListener("click", () => {
     document.querySelector('#leaderboardContainer').style.display = "none"
     guessInput.style.display = "block";
     let gameTimer = document.createElement('p')
-    gameTimer.innerText = 30
+    gameTimer.innerText = 5
     timerContainer.appendChild(gameTimer)
     const interval = setInterval(() => {
         gameTimer.innerText--
@@ -140,3 +140,21 @@ restartButton.addEventListener("click", () => {
     location.reload()
 })
 
+let scoreboardButton = document.querySelector('#scoreboardButton')
+scoreboardButton.addEventListener('click', () => {
+    location.reload()
+    let nameInput = document.querySelector('#nameInput')
+    let dataToSend = {name:nameInput.value,score:scoreCount.value}
+
+    fetch('https://23jancountyscoreboard.dev.io-academy.uk/scores', {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(dataToSend)
+    }).then((response) => {
+        return response.json()
+    }).then((data) => {
+        console.log(data)
+    })
+})

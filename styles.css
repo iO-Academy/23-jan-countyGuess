@@ -175,6 +175,12 @@ li {
     font-size:1rem;
 }
 
+#nameInput {
+    width: 200px;
+    height: 55px
+
+}
+
 @media screen and (max-width: 800px) {
     main {
         display: block;
@@ -217,4 +223,11 @@ li {
     li {
         font-size: 0.75rem;
     }
+
+    #nameInput {
+        width: 150px;
+        height: 50px
+
+    }
+
 }
