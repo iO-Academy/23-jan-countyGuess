@@ -16,7 +16,7 @@ const guessHandler = () => {
 // When the user clicks anywhere outside the modal, close it
 window.addEventListener('click',(e) => {
     if (e.target == instructionModal) {
-        instructionModal.style.display = "none";
+        instructionModal.style.display = "none"
     }
 })
 
@@ -24,13 +24,13 @@ window.addEventListener('click',(e) => {
 let makeUpper = value => value.toUpperCase()
 
 // Get the modal
-let instructionModal = document.getElementById("instructionModal");
+let instructionModal = document.getElementById("instructionModal")
 
 // Get the button that opens the modal
-let instructions = document.getElementById("instructions");
+let instructions = document.getElementById("instructions")
 
 // Get the <span> element that closes the modal
-let instructionModalClose = document.getElementById("instructionModalClose");
+let instructionModalClose = document.getElementById("instructionModalClose")
 
 // Get the score modal
 let scoreModal = document.getElementById("scoreModal")
@@ -98,19 +98,19 @@ let answersContainer = document.querySelector("#answersContainer")
 
 // When the user clicks on the button, open the modal
 instructions.addEventListener('click',() => {
-    instructionModal.style.display = "block";
+    instructionModal.style.display = "block"
 })
 
 // When the user clicks on <span> (x), close the modal
 instructionModalClose.addEventListener('click',() => {
-    instructionModal.style.display = "none";
+    instructionModal.style.display = "none"
 })
 
 
 startGame.addEventListener("click", () => {
-    startGame.style.display = "none";
+    startGame.style.display = "none"
     document.querySelector('#leaderboardContainer').style.display = "none"
-    guessInput.style.display = "block";
+    guessInput.style.display = "block"
     let gameTimer = document.createElement('p')
     gameTimer.innerText = 30
     timerContainer.appendChild(gameTimer)
@@ -120,10 +120,11 @@ startGame.addEventListener("click", () => {
         if (gameTimer.innerText == 0) {
             clearInterval(interval)
             gameTimer.innerText = ''
-            scoreModal.style.display = "block";
+            scoreModal.style.display = "block"
             document.querySelector('#guessInput').disabled = true
             document.querySelector('#guessInput').value = ''
             finalScore.innerText = scoreCount
+            instructionModal.style.display = "none"
         }
     }, 1000)
 })
@@ -142,20 +143,22 @@ restartButton.addEventListener("click", () => {
 let scoreboardButton = document.querySelector('#scoreboardButton')
 scoreboardButton.addEventListener('click', () => {
     let nameInput = document.querySelector('#nameInput')
-    let dataToSend = {name:nameInput.value,score:scoreCount.value}
+    if (nameInput.value.trim()){
+        let dataToSend = {name:nameInput.value.replace(/[^\w\s]/gi, ''),score:scoreCount}
 
-    fetch('https://23jancountyscoreboard.dev.io-academy.uk/scores', {
-        method: 'POST',
-        headers: {
-            'content-type': 'application/json'
-        },
-        body: JSON.stringify(dataToSend)
-    }).then((response) => {
-        return response.json()
-    }).then((data) => {
-        console.log(data)
-        location.reload()
-    })
+        fetch('https://23jancountyscoreboard.dev.io-academy.uk/scores', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(dataToSend)
+        }).then((response) => {
+            return response.json()
+        }).then((data) => {
+            console.log(data)
+            location.reload()
+        })
+    }
 })
 
 let scoreboard = document.querySelector('#leaderboardTableBody')
