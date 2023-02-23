@@ -175,6 +175,41 @@ li {
     font-size:1rem;
 }
 
+#leaderboardTable {
+    border: 2px solid #44515F;
+    background-color: #9EC7F3;
+    width: 60%;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+#leaderboardTable td, #leaderboardTable th {
+    border: 1px solid #696969;
+    padding: 3px 2px;
+}
+
+#leaderboardTable tbody td {
+    font-size: 16px;
+    color: #44515F;
+}
+
+#leaderboardTable thead {
+    background: #7593B3;
+    border-bottom: 1px solid #44515F;
+}
+
+#leaderboardTable thead th {
+    font-size: 19px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-align: center;
+    border-left: 2px solid #44515F;
+}
+
+#leaderboardTable thead th:first-child {
+    border-left: none;
+}
+
 @media screen and (max-width: 800px) {
     main {
         display: block;
