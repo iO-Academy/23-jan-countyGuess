@@ -28,6 +28,17 @@
             <div class="listContainer">
                 <ul id="answersContainer"></ul>
             </div>
+            <div id="leaderboardContainer">
+                <table id="leaderboardTable">
+                    <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Score</th>
+                    </tr>
+                    </thead>
+                    <tbody id="leaderboardTableBody"></tbody>
+                </table>
+            </div>
         </div>
 
         <div id="instructionModal">
@@ -44,6 +55,8 @@
             <div id="scoreModalContent">
                 <h4>YOUR SCORE</h4>
                 <p id="finalScore"> Score will be here </p>
+                <input id="nameInput" type="text" placeholder="Name...">
+                <button id="scoreboardButton">Add Score ➜</button>
                 <button id="restartButton">Restart</button>
             </div>
         </div>
