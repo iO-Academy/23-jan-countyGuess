@@ -143,7 +143,7 @@ restartButton.addEventListener("click", () => {
 let scoreboardButton = document.querySelector('#scoreboardButton')
 scoreboardButton.addEventListener('click', () => {
     let nameInput = document.querySelector('#nameInput')
-    if (nameInput.value.trim()){
+    if (nameInput.value.trim() &&nameInput.value.length <= 1000){
         let dataToSend = {name:nameInput.value.replace(/[^\w\s]/gi, ''),score:scoreCount}
 
         fetch('https://23jancountyscoreboard.dev.io-academy.uk/scores', {
@@ -155,9 +155,11 @@ scoreboardButton.addEventListener('click', () => {
         }).then((response) => {
             return response.json()
         }).then((data) => {
-            console.log(data)
             location.reload()
         })
+    }
+    else {
+        alert("There was a problem with your name input, please try again.")
     }
 })
 
