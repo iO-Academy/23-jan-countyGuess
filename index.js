@@ -112,7 +112,7 @@ startGame.addEventListener("click", () => {
     document.querySelector('#leaderboardContainer').style.display = "none"
     guessInput.style.display = "block";
     let gameTimer = document.createElement('p')
-    gameTimer.innerText = 5
+    gameTimer.innerText = 30
     timerContainer.appendChild(gameTimer)
     const interval = setInterval(() => {
         gameTimer.innerText--
