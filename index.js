@@ -13,7 +13,7 @@ const guessHandler = () => {
     }
 }
 
-// When the user clicks anywhere outside of the modal, close it
+// When the user clicks anywhere outside the modal, close it
 window.addEventListener('click',(e) => {
     if (e.target == instructionModal) {
         instructionModal.style.display = "none";
@@ -35,7 +35,6 @@ let instructionModalClose = document.getElementById("instructionModalClose");
 // Get the score modal
 let scoreModal = document.getElementById("scoreModal")
 let finalScore = document.querySelector('#finalScore')
-
 let startGame = document.querySelector("#startGame")
 let guessInput = document.querySelector("#guessInput")
 let timerContainer = document.querySelector("#timerContainer")
@@ -158,3 +157,18 @@ scoreboardButton.addEventListener('click', () => {
         location.reload()
     })
 })
+
+let scoreboard = document.querySelector('#leaderboardTableBody')
+fetch('https://23jancountyscoreboard.dev.io-academy.uk/scores')
+    .then((response) => {
+      return response.json()
+    }).then((data)=> {
+        let scores = data.data
+        scores.sort((a, b) => b.score - a.score)
+        scores.forEach ((item)=>{
+            let row = scoreboard.insertRow()
+            row.insertCell(0).innerText=item.name
+            row.insertCell(1).innerText=item.score
+        })
+})
+
